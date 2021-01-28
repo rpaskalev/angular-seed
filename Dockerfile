@@ -12,6 +12,8 @@ ENV PATH="/usr/local/lib/nodejs/node-v14.15.0-linux-x64/bin:${PATH}"
 
 COPY angular-seed .
 
+VOLUME /var/run/docker.sock:/var/run/docker.sock
+
 RUN npm install
 
 CMD npm start
