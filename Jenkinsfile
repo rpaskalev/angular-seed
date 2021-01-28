@@ -5,13 +5,13 @@ pipeline {
         
     stage('build image') {
       steps {
-        sh 'docker build -t Angular-app .'
+        sh 'docker build -t angular-app .'
       }
     }
      
     stage('run container') {
       steps {
-         sh 'docker run -it -d --net=host Angular-app'
+         sh 'docker run -it -d --net=host angular-app'
       }
     }      
   }
