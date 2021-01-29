@@ -11,7 +11,7 @@ pipeline {
      
     stage('run container') {
       steps {
-         sh 'docker run -it -d --net=host angular-app'
+         sh 'docker run -it -d -p 8000:8999 angular-app'
       }
     }      
   }
